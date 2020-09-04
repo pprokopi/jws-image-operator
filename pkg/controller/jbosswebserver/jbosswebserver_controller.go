@@ -115,7 +115,7 @@ func (r *ReconcileJBossWebServer) Reconcile(request reconcile.Request) (reconcil
 	// Check if the Service already exists, if not create a new one
 	list := &corev1.ServiceList{}
 	opts := &client.ListOptions{}
-	err = r.client.List(context.TODO(), opts, list)
+	err = r.client.List(context.TODO(), list, opts)
 	if (err != nil && errors.IsNotFound(err)) || len(list.Items) == 1 {
 		// Define the Service for the route.
 		ser := r.serviceForJBossWebServer(jbosswebserver)
