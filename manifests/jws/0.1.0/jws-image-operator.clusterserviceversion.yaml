@@ -41,6 +41,7 @@ metadata:
         }
       ]
     capabilities: Basic Install
+    containerImage: quay.io/repository/web-servers/jws-operator:0.1.0
     description: Operator that creates and manages Java applications running on JWS
       or Tomcat
   name: jws-image-operator.v0.1.0
